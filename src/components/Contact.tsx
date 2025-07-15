@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import ContactSubmitAnimation from './ContactSubmitAnimation';
 
 const Contact = () => {
   // Replace with your Formspree endpoint after registering your email at https://formspree.io/
@@ -122,8 +123,10 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-xl p-8">
+          <div className="bg-gray-50 rounded-xl p-8 relative overflow-hidden">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Me a Message</h3>
+            {/* Animation overlay on success */}
+            {status === 'success' && <ContactSubmitAnimation />}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -194,6 +197,7 @@ const Contact = () => {
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2"
+                disabled={status === 'submitting'}
               >
                 <Send size={18} />
                 <span>Send Message</span>
