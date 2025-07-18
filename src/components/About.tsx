@@ -13,7 +13,7 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Frontend developer with 3+ years of experience, passionate about creating and implementing web applications using the latest frontend technologies. Currently working as a junior frontend developer intern at a health insurance company. Strong problem-solving skills, attention to detail, and ability to work independently and collaboratively in fast-paced environments.
+            Frontend developer with 3+ years of experience, passionate about creating and implementing web applications using the latest frontend technologies. Currently working as a frontend developer at a health insurance company. Strong problem-solving skills, attention to detail, and ability to work independently and collaboratively in fast-paced environments.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: "Junior Frontend Developer",
+      title: "Frontend Developer",
       company: "GetSavvi Health",
       location: "Cape Town",
       period: "Nov 2023 - Present",
@@ -19,14 +19,14 @@ const Experience = () => {
         "Responsible for full development lifecycle from design to deployment",
         "Currently working on API integrations to enhance website functionalities and user experiences"
       ],
-      technologies: ["React JS", "Tailwind CSS", "TypeScript", "C#", "ASP.NET Core Web APIs"],
+      technologies: ["React JS", "Tailwind CSS", "TypeScript", "C#", "ASP.NET Core Web APIs", "MVC", "JQuery"],
       featured: true
     },
     {
       title: "Freelance Mobile App Developer",
       company: "WazzaScore",
       location: "Cape Town (Remote)",
-      period: "Dec 2023 - Dec 2025",
+      period: "Dec 2023 - Dec 2024",
       type: "Freelance",
       description: "Developed mobile application using React Native for school rugby engagement. Built entire app from concept to deployment, focusing on user engagement and live API data integration.",
       achievements: [
@@ -34,7 +34,7 @@ const Experience = () => {
         "Built entire app from concept to deployment, showcasing full-stack mobile development skills",
         "Integrated live data from APIs for real-time updates and interactive features"
       ],
-      technologies: ["React Native", "API Integration", "Mobile Development"],
+      technologies: ["React Native", "API Integration", "Mobile Development", "Firebase", "Gitlab"],
       featured: false
     },
     {
@@ -52,14 +52,14 @@ const Experience = () => {
         "Constructed UI components including tables and treenodes",
         "Involved in database management and API development for seamless frontend-backend communication"
       ],
-      technologies: ["C#", "ASP.NET Core Web APIs", "TypeScript", "Angular", "Database Management"],
+      technologies: ["C#", "ASP.NET Core Web APIs", "TypeScript", "Angular", "Database Management", "Azure"],
       featured: false
     },
     {
       title: "Frontend Developer",
       company: "Simpal Connect",
       location: "Cape Town",
-      period: "Feb 2022 - December 2022",
+      period: "Feb 2022 - Present",
       type: "Freelance",
       description: "Worked independently and in a team to solve problems, delivered on company/client expectations, and contributed to innovation and technology adoption.",
       achievements: [
@@ -67,14 +67,14 @@ const Experience = () => {
         "Maintained communication to ensure project satisfaction",
         "Actively engaged in group meetings and innovation team"
       ],
-      technologies: ["React JS", "Tailwind CSS", "TypeScript"],
+      technologies: ["React JS", "Tailwind CSS", "TypeScript", "PHP Laravel"],
       featured: false
     },
     {
       title: "Frontend Developer",
       company: "Limes",
       location: "Cape Town",
-      period: "Feb 2022 - December 2022",
+      period: "Feb 2022 - Present",
       type: "Freelance",
       description: "Part of innovation team, contributed to user experience design, and developed/maintained frontend of web applications.",
       achievements: [
@@ -82,7 +82,7 @@ const Experience = () => {
         "Contributed to user experience design for intuitive interfaces",
         "Developed and maintained frontend of web applications"
       ],
-      technologies: ["React JS", "Tailwind CSS", "TypeScript"],
+      technologies: ["React JS", "Tailwind CSS", "TypeScript", "Figma", "API integration"],
       featured: false
     }
   ];

@@ -1,5 +1,5 @@
-import React from 'react';
-import { ExternalLink, Github, Zap, Users, Globe } from 'lucide-react';
+
+import { ExternalLink, Github, } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -15,47 +15,42 @@ const Projects = () => {
         "Payment integration",
         "Mobile-responsive design"
       ],
-      liveUrl: "#",
-      githubUrl: "#",
       featured: true
     },
     {
-      title: "E-Commerce Dashboard",
-      description: "A modern, responsive admin dashboard for e-commerce management with analytics, inventory management, and order tracking capabilities.",
-      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "Next.js", "TypeScript", "Chart.js", "SCSS"],
+      title: "Crown Funeral",
+      description: "A modern approach to the funeral space focusing on SASSA grant individuals.",
+      image: "https://images.pexels.com/photos/10485418/pexels-photo-10485418.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["React", "Tailwind CSS", "TypeScript","Firebase"],
       features: [
-        "Interactive analytics dashboard",
-        "Inventory management",
-        "Order tracking system",
-        "User management",
+        "Modern design",
+        "Member dashboard",
+        "Detailed plan breakdowns",
         "Responsive design"
       ],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://www.crownfuneral.co.za/",
       featured: false
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and intuitive project organization.",
-      image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "Firebase", "Material-UI", "Redux", "Jest"],
+      title: "WazzaScore",
+      description: "A community-driven schoolboy rugby app, designed to bring the excitement of grassroots rugby directly to your fingertips.",
+      image: "https://images.pexels.com/photos/31003855/pexels-photo-31003855.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["React Native", "Firebase", "Firebase"],
       features: [
         "Real-time collaboration",
-        "Drag-and-drop interface",
+        "Gamification system",
         "Team management",
-        "Progress tracking",
-        "Mobile app"
+        "Profile management",
+        "Live updates"
       ],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://play.google.com/store/apps/details?id=com.wazzascoreapp&pli=1",
       featured: false
     },
     {
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website showcasing my work and skills with smooth animations and optimized performance.",
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "ThreeJs"],
       features: [
         "Responsive design",
         "Smooth animations",
@@ -63,8 +58,8 @@ const Projects = () => {
         "SEO friendly",
         "Contact form"
       ],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://www.devbyc.co.za/",
+      githubUrl: "https://github.com/ChrissieDk/CV-2",
       featured: false
     }
   ];
@@ -92,11 +87,11 @@ const Projects = () => {
               }`}
             >
               <div className={`${project.featured ? 'lg:flex' : ''}`}>
-                <div className={`relative overflow-hidden ${project.featured ? 'lg:w-1/2' : ''}`}>
+                <div className={`relative overflow-hidden ${project.featured ? 'lg:w-1/2 min-h-[20rem]' : ''}`}>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className={`w-full ${project.featured ? 'h-full min-h-[20rem]' : 'h-64'} object-cover group-hover:scale-105 transition-transform duration-300`}
                   />
                   <div className="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
                   {project.featured && (
@@ -112,20 +107,30 @@ const Projects = () => {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-2xl font-bold text-gray-900">{project.title}</h3>
                     <div className="flex space-x-2">
-                      <a
-                        href={project.liveUrl}
-                        className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200"
-                        title="View Live"
-                      >
-                        <ExternalLink size={16} />
-                      </a>
-                      <a
-                        href={project.githubUrl}
-                        className="p-2 bg-gray-600 text-white rounded-full hover:bg-gray-700 transition-colors duration-200"
-                        title="View Code"
-                      >
-                        <Github size={16} />
-                      </a>
+                      {project.liveUrl || project.githubUrl ? (
+                        <>
+                          {project.liveUrl && (
+                            <a
+                              href={project.liveUrl}
+                              className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200"
+                              title="View Live"
+                            >
+                              <ExternalLink size={16} />
+                            </a>
+                          )}
+                          {project.githubUrl && (
+                            <a
+                              href={project.githubUrl}
+                              className="p-2 bg-gray-600 text-white rounded-full hover:bg-gray-700 transition-colors duration-200"
+                              title="View Code"
+                            >
+                              <Github size={16} />
+                            </a>
+                          )}
+                        </>
+                      ) : (
+                        <span className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-semibold shadow-sm">Coming soon!</span>
+                      )}
                     </div>
                   </div>
                   
