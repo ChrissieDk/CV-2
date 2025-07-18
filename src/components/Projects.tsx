@@ -17,20 +17,20 @@ const Projects = () => {
       ],
       featured: true
     },
-    {
-      title: "Crown Funeral",
-      description: "A modern approach to the funeral space focusing on SASSA grant individuals.",
-      image: "https://images.pexels.com/photos/10485418/pexels-photo-10485418.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "Tailwind CSS", "TypeScript","Firebase"],
-      features: [
-        "Modern design",
-        "Member dashboard",
-        "Detailed plan breakdowns",
-        "Responsive design"
-      ],
-      liveUrl: "https://www.crownfuneral.co.za/",
-      featured: false
-    },
+    // {
+    //   title: "Crown Funeral",
+    //   description: "A modern approach to the funeral space focusing on SASSA grant individuals.",
+    //   image: "https://images.pexels.com/photos/10485418/pexels-photo-10485418.jpeg?auto=compress&cs=tinysrgb&w=800",
+    //   technologies: ["React", "Tailwind CSS", "TypeScript","Firebase"],
+    //   features: [
+    //     "Modern design",
+    //     "Member dashboard",
+    //     "Detailed plan breakdowns",
+    //     "Responsive design"
+    //   ],
+    //   liveUrl: "https://www.crownfuneral.co.za/",
+    //   featured: false
+    // },
     {
       title: "WazzaScore",
       description: "A community-driven schoolboy rugby app, designed to bring the excitement of grassroots rugby directly to your fingertips.",
