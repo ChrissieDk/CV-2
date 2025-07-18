@@ -111,7 +111,7 @@ const Contact = () => {
                   <Github size={20} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/christiaan-de-kock"
+                  href="https://www.linkedin.com/in/christiaan-de-kock-2a7017100/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors duration-200"

@@ -1,5 +1,53 @@
 import React from 'react';
-import { Code, Palette, Database, Globe, Smartphone, Zap } from 'lucide-react';
+import {
+  Code,
+  Palette,
+  Database,
+  Zap,
+  Atom,
+  FileType2,
+  FileCode,
+  Wind,
+  Paintbrush,
+  Brush,
+  Box,
+  MonitorSmartphone,
+  LayoutDashboard,
+  Code2,
+  Flame,
+  Server,
+  ServerCog,
+  Share2,
+  GitBranch,
+  Package,
+  Bolt,
+  CheckCircle2,
+  PenTool
+} from 'lucide-react';
+
+const skillIconMap: Record<string, React.ReactNode> = {
+  'React': <Atom className="w-5 h-5 text-blue-500" />,
+  'TypeScript': <FileType2 className="w-5 h-5 text-blue-700" />,
+  'JavaScript (ES6+)': <FileCode className="w-5 h-5 text-yellow-500" />,
+  'HTML5': <FileCode className="w-5 h-5 text-orange-500" />,
+  'Tailwind CSS': <Wind className="w-5 h-5 text-cyan-500" />,
+  'SCSS/Sass': <Paintbrush className="w-5 h-5 text-pink-500" />,
+  'Styled Components': <Brush className="w-5 h-5 text-fuchsia-500" />,
+  'Bootstrap': <Box className="w-5 h-5 text-purple-700" />,
+  'Responsive Design': <MonitorSmartphone className="w-5 h-5 text-green-500" />,
+  'UI/UX Principles': <LayoutDashboard className="w-5 h-5 text-indigo-500" />,
+  'C#': <Code2 className="w-5 h-5 text-violet-700" />,
+  'Firebase': <Flame className="w-5 h-5 text-orange-400" />,
+  'REST APIs': <Server className="w-5 h-5 text-gray-700" />,
+  'Node.js': <ServerCog className="w-5 h-5 text-green-700" />,
+  'SQL': <Database className="w-5 h-5 text-blue-900" />,
+  'GraphQL': <Share2 className="w-5 h-5 text-pink-600" />,
+  'Git/GitHub': <GitBranch className="w-5 h-5 text-gray-800" />,
+  'Webpack': <Package className="w-5 h-5 text-blue-400" />,
+  'Vite': <Bolt className="w-5 h-5 text-yellow-400" />,
+  'ESLint': <CheckCircle2 className="w-5 h-5 text-purple-500" />,
+  'Figma': <PenTool className="w-5 h-5 text-pink-400" />,
+};
 
 const Skills = () => {
   const skillCategories = [
@@ -7,58 +55,47 @@ const Skills = () => {
       title: "Frontend Development",
       icon: <Code className="w-6 h-6" />,
       skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "JavaScript (ES6+)", level: 95 },
-        { name: "Next.js", level: 85 },
-        { name: "HTML5", level: 98 },
-        { name: "CSS3", level: 95 }
+        { name: "React" },
+        { name: "TypeScript" },
+        { name: "JavaScript (ES6+)" },
+        { name: "HTML5" },
       ]
     },
     {
       title: "Styling & Design",
       icon: <Palette className="w-6 h-6" />,
       skills: [
-        { name: "Tailwind CSS", level: 95 },
-        { name: "SCSS/Sass", level: 88 },
-        { name: "Styled Components", level: 82 },
-        { name: "Bootstrap", level: 90 },
-        { name: "Responsive Design", level: 95 },
-        { name: "UI/UX Principles", level: 80 }
+        { name: "Tailwind CSS" },
+        { name: "SCSS/Sass" },
+        { name: "Styled Components" },
+        { name: "Bootstrap" },
+        { name: "Responsive Design" },
+        { name: "UI/UX Principles" }
       ]
     },
     {
       title: "Backend & Database",
       icon: <Database className="w-6 h-6" />,
       skills: [
-        { name: "C#", level: 85 },
-        { name: "Firebase", level: 88 },
-        { name: "REST APIs", level: 90 },
-        { name: "Node.js", level: 75 },
-        { name: "SQL", level: 78 },
-        { name: "GraphQL", level: 70 }
+        { name: "C#" },
+        { name: "Firebase" },
+        { name: "REST APIs" },
+        { name: "Node.js" },
+        { name: "SQL" },
       ]
     },
     {
       title: "Tools & Workflow",
       icon: <Zap className="w-6 h-6" />,
       skills: [
-        { name: "Git/GitHub", level: 92 },
-        { name: "Webpack", level: 80 },
-        { name: "Vite", level: 88 },
-        { name: "Jest", level: 82 },
-        { name: "ESLint", level: 85 },
-        { name: "Figma", level: 78 }
+        { name: "Git/GitHub" },
+        { name: "Webpack" },
+        { name: "Vite" },
+        { name: "ESLint" },
+        { name: "Figma" }
       ]
     }
   ];
-
-  const getSkillColor = (level: number) => {
-    if (level >= 90) return 'from-green-400 to-green-600';
-    if (level >= 80) return 'from-blue-400 to-blue-600';
-    if (level >= 70) return 'from-yellow-400 to-yellow-600';
-    return 'from-orange-400 to-orange-600';
-  };
 
   return (
     <section id="skills" className="py-20 bg-white">
@@ -84,20 +121,11 @@ const Skills = () => {
                 <div className="text-blue-600 mr-3">{category.icon}</div>
                 <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>
               </div>
-              
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="relative">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-sm text-gray-500">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className={`h-2 rounded-full bg-gradient-to-r ${getSkillColor(skill.level)} transition-all duration-1000 ease-out`}
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                  <div key={skillIndex} className="flex items-center gap-2 text-gray-700 font-medium text-sm">
+                    {skillIconMap[skill.name] || <Code className="w-4 h-4 text-gray-400" />}
+                    {skill.name}
                   </div>
                 ))}
               </div>
@@ -113,7 +141,7 @@ const Skills = () => {
               Currently exploring:
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {['React Native', 'Three.js', 'WebGL', 'Micro-frontends', 'Web3', 'AI/ML'].map((tech, index) => (
+              {['React Native', 'Three.js', 'NextJS', 'Micro-frontends', 'SQL', 'AI/ML', 'MCP Servers'].map((tech, index) => (
                 <span
                   key={index}
                   className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium"

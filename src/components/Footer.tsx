@@ -1,5 +1,6 @@
 
 import { Heart, Github, Linkedin, Mail } from 'lucide-react';
+import devbycLogo from '../assets/devbyc-white.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -25,7 +26,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/christiaan-de-kock"
+                href="https://www.linkedin.com/in/christiaan-de-kock-2a7017100/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -33,11 +34,14 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:christiaan.dekock@email.com"
+                href="mailto:christiaan.dk96@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 <Mail size={20} />
               </a>
+            </div>
+            <div>
+              <img src={devbycLogo} alt="devbyc logo" className="h-24 w-24 object-contain" />
             </div>
           </div>
 
@@ -68,10 +72,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <div className="space-y-2">
               <p className="text-gray-300">
-                <span className="font-semibold">Email:</span> christiaan.dekock@email.com
+                <span className="font-semibold">Email:</span> christiaandk96@gmail.com
               </p>
               <p className="text-gray-300">
-                <span className="font-semibold">Phone:</span> +27 123 456 789
+                <span className="font-semibold">Phone:</span> 0767558992
               </p>
               <p className="text-gray-300">
                 <span className="font-semibold">Location:</span> South Africa
